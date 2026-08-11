@@ -1,0 +1,14 @@
+{"kind": "asset", "id": "C-301", "type": "column", "name": "distillation column", "trays": 24}
+{"kind": "asset", "id": "E-301", "type": "condenser", "name": "overhead condenser", "serves": "C-301"}
+{"kind": "asset", "id": "E-302", "type": "reboiler", "name": "reboiler", "serves": "C-301"}
+{"kind": "asset", "id": "V-301", "type": "valve", "name": "flare vent valve", "serves": "C-301"}
+{"kind": "tag", "id": "PT-301", "asset": "C-301", "measures": "overhead pressure", "unit": "kPa", "nominal": 180.0, "alarm_hi": 210.0, "trip_hi": 230.0}
+{"kind": "tag", "id": "LT-401", "asset": "E-302", "measures": "reboiler level", "unit": "fraction", "nominal": 0.5, "alarm_lo": 0.25, "trip_lo": 0.15}
+{"kind": "tag", "id": "FT-501", "asset": "E-301", "measures": "cooling water flow", "unit": "% of design", "nominal": 100.0, "alarm_lo": 70.0}
+{"kind": "tag", "id": "TT-302", "asset": "C-301", "measures": "overhead temperature", "unit": "K", "nominal": 351.0, "alarm_hi": 360.0}
+{"kind": "tag", "id": "FC-601", "asset": "C-301", "measures": "reflux flow", "unit": "% of design", "nominal": 100.0, "alarm_lo": 60.0}
+{"kind": "link", "id": "L-1", "from": "E-302", "to": "C-301", "carries": "vapor"}
+{"kind": "link", "id": "L-2", "from": "C-301", "to": "E-301", "carries": "overhead vapor"}
+{"kind": "link", "id": "L-3", "from": "E-301", "to": "C-301", "carries": "reflux"}
+{"kind": "link", "id": "L-4", "from": "C-301", "to": "V-301", "carries": "relief to flare"}
+{"kind": "tag", "id": "DPT-320", "asset": "C-301", "measures": "column differential pressure", "unit": "kPa", "nominal": 18.0, "alarm_hi": 26.0}

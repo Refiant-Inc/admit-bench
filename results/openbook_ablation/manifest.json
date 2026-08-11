@@ -1,0 +1,60 @@
+{
+  "experiment": "ADMIT-Bench v4 (hardened kernel) \u2014 full evaluation",
+  "run_directory": "openbook_ablation_20260717_144544",
+  "date_run": "2026-07-17T14:46:04-0400",
+  "code_git_rev_at_run": [
+    "be48a16"
+  ],
+  "code_git_rev_at_build": "4d16c04",
+  "cartridge_content_hashes": {
+    "column_alpha": "4bdd900582b7b8bf",
+    "cstr_alpha": "58457f7b6f1630c8"
+  },
+  "decoding": [],
+  "models": {
+    "openrouter:anthropic/claude-haiku-4.5": {
+      "episodes": 25,
+      "first": "2026-07-17T14:49:22-0400",
+      "last": "2026-07-17T14:51:22-0400"
+    },
+    "openrouter:anthropic/claude-sonnet-5": {
+      "episodes": 25,
+      "first": "2026-07-17T14:51:56-0400",
+      "last": "2026-07-17T14:59:20-0400"
+    },
+    "openrouter:openai/gpt-5.4-mini": {
+      "episodes": 25,
+      "first": "2026-07-17T15:07:14-0400",
+      "last": "2026-07-17T15:08:03-0400"
+    },
+    "openrouter:openai/gpt-5.5": {
+      "episodes": 25,
+      "first": "2026-07-17T14:59:44-0400",
+      "last": "2026-07-17T15:07:12-0400"
+    },
+    "refiant:protea-1": {
+      "episodes": 25,
+      "first": "2026-07-17T14:46:04-0400",
+      "last": "2026-07-17T14:47:18-0400"
+    },
+    "refiant:protea-10": {
+      "episodes": 25,
+      "first": "2026-07-17T14:48:20-0400",
+      "last": "2026-07-17T14:49:18-0400"
+    },
+    "refiant:protea-5": {
+      "episodes": 25,
+      "first": "2026-07-17T14:47:21-0400",
+      "last": "2026-07-17T14:48:18-0400"
+    }
+  },
+  "counts": {
+    "gate_base_episodes": 175,
+    "gate_caution_ablations": 0,
+    "gate_total": 175,
+    "layer1_episodes": 0,
+    "total_evaluations": 175
+  },
+  "total_cost_usd": 1.3455,
+  "secrets_note": "No API key was ever written to any trace; verified against full git history."
+}

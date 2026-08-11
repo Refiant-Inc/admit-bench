@@ -1,0 +1,9 @@
+# Default owner for everything in this repository.
+* @YashM1503
+
+# Security-sensitive paths.
+admitbench/ @YashM1503
+admitbench/cartridges/ @YashM1503
+plugin/ @YashM1503
+.github/ @YashM1503
+SECURITY.md @YashM1503

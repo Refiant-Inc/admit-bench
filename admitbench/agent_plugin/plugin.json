@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "admit-bench",
+  "version": "0.1.0",
+  "description": "Admissibility gates for agents that act on physical plants. Check a proposed action against evidence, authority, procedure, and projected physics before it executes.",
+  "author": {
+    "name": "Refiant, Inc.",
+    "email": "team@refiant.ai",
+    "url": "https://refiant.ai"
+  },
+  "homepage": "https://arxiv.org/abs/2608.03866",
+  "repository": "https://github.com/Refiant-Inc/admit-bench",
+  "license": "Apache-2.0",
+  "keywords": [
+    "industrial-ai",
+    "process-control",
+    "agent-safety",
+    "admissibility",
+    "guardrails",
+    "evaluation"
+  ]
+}

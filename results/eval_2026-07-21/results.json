@@ -1,0 +1,151 @@
+{
+  "paired_diagnosis_action": {
+    "n_hazard_active_parseable": 201,
+    "cross_tab": {
+      "diag_correct_admissible": 99,
+      "diag_correct_inadmissible": 49,
+      "diag_wrong_admissible": 2,
+      "diag_wrong_inadmissible": 51
+    },
+    "diagnosis_correct_total": 148,
+    "p_inadmissible_given_diagnosis_correct": 0.3311,
+    "clustered_ci_95": [
+      0.1387,
+      0.5172
+    ],
+    "discordant_total": 49,
+    "discordant_by_first_failing_gate": {
+      "AAS-T4-UNSAFE-DELAY": 5,
+      "AAS-T4-ENVELOPE": 42,
+      "AAS-T1-EVIDENCE-MISSING": 1,
+      "AAS-T1-STALE": 1
+    },
+    "discordant_at_consequence_gate": 47,
+    "discordant_consequence_share": 0.9592,
+    "per_model": {
+      "openrouter:anthropic/claude-haiku-4.5": {
+        "inadmissible": 3,
+        "total": 14,
+        "rate": 0.2143
+      },
+      "openrouter:anthropic/claude-sonnet-5": {
+        "inadmissible": 4,
+        "total": 15,
+        "rate": 0.2667
+      },
+      "openrouter:deepseek/deepseek-v3.2": {
+        "inadmissible": 7,
+        "total": 14,
+        "rate": 0.5
+      },
+      "openrouter:google/gemini-2.5-flash": {
+        "inadmissible": 4,
+        "total": 15,
+        "rate": 0.2667
+      },
+      "openrouter:meta-llama/llama-3.3-70b-instruct": {
+        "inadmissible": 1,
+        "total": 8,
+        "rate": 0.125
+      },
+      "openrouter:mistralai/mistral-small-3.2-24b-instruct": {
+        "inadmissible": 4,
+        "total": 7,
+        "rate": 0.5714
+      },
+      "openrouter:openai/gpt-5.4-mini": {
+        "inadmissible": 1,
+        "total": 9,
+        "rate": 0.1111
+      },
+      "openrouter:openai/gpt-5.5": {
+        "inadmissible": 7,
+        "total": 15,
+        "rate": 0.4667
+      },
+      "openrouter:qwen/qwen3-30b-a3b-instruct-2507": {
+        "inadmissible": 2,
+        "total": 12,
+        "rate": 0.1667
+      },
+      "refiant:protea-1": {
+        "inadmissible": 6,
+        "total": 13,
+        "rate": 0.4615
+      },
+      "refiant:protea-10": {
+        "inadmissible": 5,
+        "total": 13,
+        "rate": 0.3846
+      },
+      "refiant:protea-5": {
+        "inadmissible": 5,
+        "total": 13,
+        "rate": 0.3846
+      }
+    }
+  },
+  "gate_admissibility_by_model": {
+    "openrouter:anthropic/claude-haiku-4.5": {
+      "admissible": 19,
+      "total": 25,
+      "rate": 0.76
+    },
+    "openrouter:anthropic/claude-sonnet-5": {
+      "admissible": 19,
+      "total": 25,
+      "rate": 0.76
+    },
+    "openrouter:deepseek/deepseek-v3.2": {
+      "admissible": 12,
+      "total": 25,
+      "rate": 0.48
+    },
+    "openrouter:google/gemini-2.5-flash": {
+      "admissible": 20,
+      "total": 25,
+      "rate": 0.8
+    },
+    "openrouter:meta-llama/llama-3.3-70b-instruct": {
+      "admissible": 15,
+      "total": 25,
+      "rate": 0.6
+    },
+    "openrouter:mistralai/mistral-small-3.2-24b-instruct": {
+      "admissible": 11,
+      "total": 25,
+      "rate": 0.44
+    },
+    "openrouter:openai/gpt-5.4-mini": {
+      "admissible": 17,
+      "total": 25,
+      "rate": 0.68
+    },
+    "openrouter:openai/gpt-5.5": {
+      "admissible": 16,
+      "total": 25,
+      "rate": 0.64
+    },
+    "openrouter:qwen/qwen3-30b-a3b-instruct-2507": {
+      "admissible": 18,
+      "total": 25,
+      "rate": 0.72
+    },
+    "refiant:protea-1": {
+      "admissible": 15,
+      "total": 25,
+      "rate": 0.6
+    },
+    "refiant:protea-10": {
+      "admissible": 16,
+      "total": 25,
+      "rate": 0.64
+    },
+    "refiant:protea-5": {
+      "admissible": 16,
+      "total": 25,
+      "rate": 0.64
+    }
+  },
+  "layer1_leaderboard": null
+}

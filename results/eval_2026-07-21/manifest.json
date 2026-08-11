@@ -1,0 +1,91 @@
+{
+  "experiment": "ADMIT-Bench v4 (hardened kernel) \u2014 full evaluation",
+  "run_directory": "tmp.F7pMfvnX0n",
+  "date_run": "2026-07-20T20:03:06-0400",
+  "code_git_rev_at_run": [
+    "09f260a"
+  ],
+  "code_git_rev_at_build": "09f260a",
+  "cartridge_content_hashes": {
+    "column_alpha": "4bdd900582b7b8bf",
+    "cstr_alpha": "58457f7b6f1630c8"
+  },
+  "decoding": [
+    {
+      "temperature": 0.0,
+      "max_tokens": 4000,
+      "n": 588
+    }
+  ],
+  "models": {
+    "openrouter:anthropic/claude-haiku-4.5": {
+      "episodes": 469,
+      "first": "2026-07-20T23:43:44-0400",
+      "last": "2026-07-21T00:07:15-0400"
+    },
+    "openrouter:anthropic/claude-sonnet-5": {
+      "episodes": 469,
+      "first": "2026-07-20T23:51:49-0400",
+      "last": "2026-07-21T00:42:22-0400"
+    },
+    "openrouter:deepseek/deepseek-v3.2": {
+      "episodes": 469,
+      "first": "2026-07-20T23:33:02-0400",
+      "last": "2026-07-21T00:08:42-0400"
+    },
+    "openrouter:google/gemini-2.5-flash": {
+      "episodes": 469,
+      "first": "2026-07-20T23:34:09-0400",
+      "last": "2026-07-20T23:43:39-0400"
+    },
+    "openrouter:meta-llama/llama-3.3-70b-instruct": {
+      "episodes": 469,
+      "first": "2026-07-20T20:03:09-0400",
+      "last": "2026-07-21T00:15:09-0400"
+    },
+    "openrouter:mistralai/mistral-small-3.2-24b-instruct": {
+      "episodes": 469,
+      "first": "2026-07-20T20:03:11-0400",
+      "last": "2026-07-20T23:34:07-0400"
+    },
+    "openrouter:openai/gpt-5.4-mini": {
+      "episodes": 469,
+      "first": "2026-07-20T20:03:06-0400",
+      "last": "2026-07-20T23:32:53-0400"
+    },
+    "openrouter:openai/gpt-5.5": {
+      "episodes": 469,
+      "first": "2026-07-21T00:07:30-0400",
+      "last": "2026-07-21T00:56:59-0400"
+    },
+    "openrouter:qwen/qwen3-30b-a3b-instruct-2507": {
+      "episodes": 469,
+      "first": "2026-07-20T20:03:15-0400",
+      "last": "2026-07-20T23:51:25-0400"
+    },
+    "refiant:protea-1": {
+      "episodes": 469,
+      "first": "2026-07-20T20:03:09-0400",
+      "last": "2026-07-20T23:34:43-0400"
+    },
+    "refiant:protea-10": {
+      "episodes": 469,
+      "first": "2026-07-20T23:46:43-0400",
+      "last": "2026-07-20T23:58:34-0400"
+    },
+    "refiant:protea-5": {
+      "episodes": 469,
+      "first": "2026-07-20T23:34:47-0400",
+      "last": "2026-07-20T23:46:39-0400"
+    }
+  },
+  "counts": {
+    "gate_base_episodes": 300,
+    "gate_caution_ablations": 288,
+    "gate_total": 588,
+    "layer1_episodes": 5040,
+    "total_evaluations": 5628
+  },
+  "total_cost_usd": 7.6303,
+  "secrets_note": "No API key was ever written to any trace; verified against full git history."
+}

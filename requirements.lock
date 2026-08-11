@@ -1,0 +1,5 @@
+# CI dependency snapshot for pip-audit (and reproducible CI installs).
+# Direct deps from pyproject.toml; pin deliberately after review.
+# Regenerate when bumping PyYAML / pytest (or switch to pip-compile).
+PyYAML==6.0.3
+pytest==9.0.3

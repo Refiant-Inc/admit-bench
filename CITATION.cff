@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+message: "If you use ADMIT Bench in your work, please cite it as below."
+title: "ADMIT Bench: An Admissibility Standard for AI Agents that Act on Physical Plants"
+abstract: >-
+  ADMIT Bench (Admissible Decisions for Machine Interventions) is an
+  admissibility-first evaluation benchmark for industrial AI agents. It grades
+  each proposed agent action as a trace-backed state transition through a
+  deterministic chain of safety gates before any performance score exists; a
+  failed hard gate yields no aggregate, so unsafe behavior is ineligible for
+  ranking rather than ranked low.
+type: software
+version: "0.1.0"
+date-released: "2026-07-21"
+license: Apache-2.0
+repository-code: "https://github.com/Refiant-Inc/admit-bench"
+contact:
+  - email: team@refiant.ai
+    name: "Refiant, Inc."
+keywords:
+  - industrial AI
+  - process control
+  - LLM agents
+  - agent safety evaluation
+  - admissibility
+  - benchmark methodology
+authors:
+  - family-names: Gutta
+    given-names: Siddharth
+    affiliation: "Refiant, Inc."
+  - family-names: Naicker
+    given-names: Viroshan
+    affiliation: "Refiant, Inc."
+  - family-names: Misra
+    given-names: Yash
+    affiliation: "Refiant, Inc."
+  - family-names: Mercangöz
+    given-names: Mehmet
+    affiliation: "Imperial College London"
+  - family-names: Vyas
+    given-names: Javal
+    affiliation: "Imperial College London"
+
+preferred-citation:
+  type: article
+  title: >-
+    ADMITBench: A Safety-Governed Reference Framework for Evaluating the
+    Admissibility of Industrial LLM Advisories
+  year: 2026
+  month: 8
+  doi: "10.48550/arXiv.2608.03866"
+  url: "https://arxiv.org/abs/2608.03866"
+  notes: "arXiv:2608.03866 [cs.AI]"
+  authors:
+    - family-names: Misra
+      given-names: Yash
+      affiliation: "Refiant, Inc."
+    - family-names: Vyas
+      given-names: Javal
+      affiliation: "Imperial College London"
+    - family-names: Gutta
+      given-names: Siddharth
+      affiliation: "Refiant, Inc."
+    - family-names: Mercangöz
+      given-names: Mehmet
+      affiliation: "Imperial College London"

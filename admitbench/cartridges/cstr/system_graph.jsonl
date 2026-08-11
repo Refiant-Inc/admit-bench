@@ -1,0 +1,11 @@
+{"kind": "asset", "id": "R-101", "type": "reactor", "name": "CSTR reactor", "volume_l": 100}
+{"kind": "asset", "id": "E-101", "type": "jacket", "name": "cooling jacket", "serves": "R-101"}
+{"kind": "asset", "id": "P-201", "type": "pump", "name": "coolant pump", "serves": "E-101"}
+{"kind": "tag", "id": "TT-101", "asset": "R-101", "measures": "temperature", "unit": "K", "nominal": 350.0, "alarm_hi": 365.0, "trip_hi": 370.0}
+{"kind": "tag", "id": "TT-102", "asset": "R-101", "measures": "temperature", "unit": "K", "nominal": 350.0, "alarm_hi": 365.0, "trip_hi": 370.0, "note": "redundant to TT-101"}
+{"kind": "tag", "id": "FT-201", "asset": "E-101", "measures": "coolant flow", "unit": "% of design", "nominal": 100.0, "alarm_lo": 60.0}
+{"kind": "tag", "id": "FC-201", "asset": "E-101", "measures": "coolant flow setpoint", "unit": "% of design", "nominal": 100.0}
+{"kind": "tag", "id": "PT-102", "asset": "R-101", "measures": "pressure", "unit": "kPa", "nominal": 150.0, "alarm_hi": 220.0}
+{"kind": "tag", "id": "CA-101", "asset": "R-101", "measures": "concentration A", "unit": "mol/L", "nominal": 0.25}
+{"kind": "link", "id": "L-1", "from": "P-201", "to": "E-101", "carries": "coolant"}
+{"kind": "link", "id": "L-2", "from": "E-101", "to": "R-101", "carries": "heat removal"}

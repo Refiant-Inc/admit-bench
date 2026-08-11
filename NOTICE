@@ -1,0 +1,10 @@
+ADMIT Bench
+Copyright 2026 Refiant, Inc. and the ADMIT Bench authors.
+
+This product includes software developed at Refiant, Inc.
+Licensed under the Apache License, Version 2.0.
+
+The Layer-1 action-selection benchmark (benchmarks/layer1_action_selection/)
+includes data and generator scripts contributed by Javal Vyas (Imperial
+College London), provided to this project under the Apache License,
+Version 2.0.

@@ -1,0 +1,24 @@
+# Public snapshot sanitation log
+# excluded paths:
+- release_audit/00_release_baseline.md
+- release_audit/01_repo_inventory.md
+- release_audit/01b_past_push_and_exposure_forensics.md
+- release_audit/02_security_review.md
+- release_audit/03_public_content_manifest.md
+- release_audit/04_install_and_package_qa.md
+- release_audit/05_ci_cd_supply_chain.md
+- release_audit/05b_public_deployment_red_team.md
+- release_audit/06_public_ux_review.md
+- release_audit/07_benchmark_integrity.md
+- release_audit/08_license_attribution.md
+- release_audit/09_clean_history_build.md
+- release_audit/10_clean_room_verification.md
+- release_audit/BOSS_GO_NO_GO_PACKET.md
+- release_audit/FINAL_PUBLIC_RELEASE_REPORT.md
+- release_audit/RELEASE_READINESS.md
+- release_audit/_04_qa_run.log
+- release_audit/past_push_exposure_ledger.csv
+- release_audit/public_content_manifest.csv
+- results/eval_2026-07-21/traces.tar.gz
+- results/openbook_ablation/traces.tar.gz
+- results/v4_hardened/traces.tar.gz

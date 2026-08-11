@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.env
+.venv/
+.plugin-data/
+runs/
+build/
+dist/
+.DS_Store
+admitbench.config.json
+
+# Internal-only docs (never ship in public snapshot)
+docs/_agent_reports/
+docs/security/
+docs/ecosystem/
+
+# Local scaffolds (empty; not part of release)
+Contracts/
+Fixtures/

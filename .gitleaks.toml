@@ -1,0 +1,11 @@
+# Baseline gitleaks config — admit-bench (working-tree scan via CI).
+title = "admit-bench"
+
+[allowlist]
+description = "Documented placeholder keys in .env.example"
+paths = [
+  '''(^|/)\.env\.example$''',
+]
+regexes = [
+  '''sk_(live|ant|or)-your-key-here''',
+]

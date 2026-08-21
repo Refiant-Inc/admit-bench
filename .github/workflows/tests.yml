@@ -70,6 +70,7 @@ jobs:
           /tmp/venv/bin/admitbench doctor
           /tmp/venv/bin/admitbench run --cartridge cstr --provider stub --model oracle --out /tmp/nowhere/run
           /tmp/venv/bin/admitbench validate cstr
+          /tmp/venv/bin/python -c "from importlib.resources import files; r=files('admitbench.ifac_demo'); assert all(p.is_file() for p in (r/'scenarios'/'conference_cstr.yaml', r/'static'/'index.html', r/'static'/'styles.css', r/'static'/'app.js', r/'static'/'research.html'))"
 
   plugin-smoke:
     name: plugin-smoke

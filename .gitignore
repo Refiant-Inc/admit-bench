@@ -10,6 +10,7 @@ build/
 dist/
 .DS_Store
 admitbench.config.json
+data/ifac_demo/
 
 # Internal-only docs (never ship in public snapshot)
 docs/_agent_reports/

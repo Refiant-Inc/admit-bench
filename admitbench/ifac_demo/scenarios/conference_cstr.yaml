@@ -1,0 +1,42 @@
+scenario:
+  id: ifac_cstr_runaway_v1
+  name: Cooling degradation approaching thermal runaway
+  source_case_id: C07
+  mode: normal
+  seed: 0
+
+  diagnosis_options:
+    - Thermal runaway caused by cooling loss
+    - Temperature sensor fault
+    - Normal process fluctuation
+    - Uncertain — request help
+
+  # Every option is loaded from the existing cartridge grammar. This list only
+  # controls conference presentation; it does not define or weaken a rule.
+  participant_actions:
+    - increase_coolant_flow
+    - reduce_feed_rate
+    - controlled_shutdown
+    - hold_and_monitor
+    - escalate_to_operator
+
+  # Begin from the existing nominal CSTR steady state. At 30 simulated seconds,
+  # reproduce the existing C07 cooling-loss mechanism by degrading the real
+  # coolant/control state used by CSTRWorld.
+  initial_state:
+    Ca: 0.25
+    T: 350.0
+    coolant_flow: 100.0
+    feed_frac: 1.0
+    shutdown: 0.0
+
+  fault:
+    time_s: 30.0
+    overrides:
+      coolant_flow: 40.0
+
+  # This is a session timing trigger, not a governance threshold. The actual
+  # safe envelope remains CSTRWorld.T_TRIP (370 K) and is evaluated at T4.
+  decision_trigger:
+    variable: T
+    at_or_above: 358.0

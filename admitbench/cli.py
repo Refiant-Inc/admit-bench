@@ -11,6 +11,7 @@
     admitbench ingest ...                    operator notes → candidate knowledge
     admitbench promote ...                   move knowledge up the review ladder
     admitbench explain <code>                what a violation code means
+    admitbench ifac-demo                     run the local conference demonstrator
 
 `run`, `call`, `cmt`, and `sweep` read defaults from admitbench.config.json
 (written by `init`); explicit flags always win.
@@ -63,6 +64,18 @@ def cmd_doctor(args) -> int:
     from admitbench.doctor import run_doctor
 
     return run_doctor(fix=args.fix, network=args.network)
+
+
+def cmd_ifac_demo(args) -> int:
+    from admitbench.ifac_demo.server import run_server
+
+    run_server(
+        host=args.host,
+        port=args.port,
+        data_dir=args.data_dir,
+        scenario_path=args.scenario,
+    )
+    return 0
 
 
 def cmd_validate(args) -> int:
@@ -472,6 +485,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--fix", action="store_true",
                    help="apply safe and guarded repairs, then re-verify (escalations never auto-apply)")
     p.set_defaults(func=cmd_doctor)
+
+    p = sub.add_parser("ifac-demo", help="run the local IFAC live CSTR demonstrator")
+    p.add_argument("--host", default="127.0.0.1", help="bind address (default: local machine only)")
+    p.add_argument("--port", type=int, default=8000)
+    p.add_argument("--data-dir", default="data/ifac_demo")
+    p.add_argument("--scenario", default=None, help="optional scenario YAML")
+    p.set_defaults(func=cmd_ifac_demo)
 
     p = sub.add_parser("validate", help="compile-check a cartridge directory")
     p.add_argument("cartridge")

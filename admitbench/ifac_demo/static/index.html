@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>ADMIT · Live CSTR Demonstrator</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><div class="brand">ADMIT</div><div class="tagline">Governance before intervention</div></div>
+      </div>
+      <div class="top-actions">
+        <span class="connection-pill offline" id="connection-pill" role="status">CONNECTING</span>
+        <span class="research-pill" id="research-pill">RESEARCH OFF</span>
+        <button class="button ghost compact" id="fullscreen" aria-pressed="false">Fullscreen</button>
+        <button class="button ghost compact" id="new-session">Start new participant</button>
+      </div>
+    </header>
+
+    <section class="storyline" aria-label="Demonstration flow">
+      <div class="story-step active" data-story="observe"><span>01</span> Observe</div>
+      <i></i><div class="story-step" data-story="decide"><span>02</span> Decide</div>
+      <i></i><div class="story-step" data-story="govern"><span>03</span> Govern</div>
+      <i></i><div class="story-step" data-story="act"><span>04</span> Act safely</div>
+    </section>
+
+    <div class="fault-banner" id="fault-banner"><span class="fault-pulse"></span>DISTURBANCE / FAULT DETECTED</div>
+
+    <section class="plant-grid">
+      <article class="panel plant-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">LIVE PROCESS</p><h1>Continuous stirred-tank reactor</h1></div>
+          <div class="live-clock"><span class="live-dot"></span><strong id="sim-time">0:00</strong><small>SIM TIME</small></div>
+        </div>
+
+        <div class="plant-overview">
+          <div class="reactor-wrap" aria-label="CSTR process schematic">
+            <svg class="reactor" viewBox="0 0 280 230" role="img">
+              <defs><linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e69043"/><stop offset="1" stop-color="#b64b34"/></linearGradient></defs>
+              <path class="pipe" d="M15 51 H92"/><path class="pipe cool" d="M188 181 H265"/>
+              <path class="flow-arrow" d="M62 45 l12 6 -12 6"/><path class="flow-arrow cool" d="M230 175 l12 6 -12 6"/>
+              <rect class="jacket" x="84" y="30" width="112" height="174" rx="45"/>
+              <rect class="vessel" x="98" y="42" width="84" height="150" rx="34"/>
+              <path id="liquid-level" class="liquid" d="M100 103 H180 V158 Q180 190 140 190 Q100 190 100 158 Z"/>
+              <path class="shaft" d="M140 10 V119"/><path class="impeller" d="M118 119 H162 M126 108 L154 130 M154 108 L126 130"/>
+              <circle class="sensor" cx="182" cy="83" r="6"/><text x="203" y="87">TT-101</text>
+              <text x="23" y="39">FEED</text><text x="207" y="203">COOLANT</text>
+            </svg>
+            <div class="reactor-state" id="reactor-state">STABLE</div>
+          </div>
+          <div class="metric-grid">
+            <div class="metric hero"><label>Reactor temperature</label><strong><span id="temperature">350.0</span><small>K</small></strong><div class="limit-track"><span id="temp-track"></span><i></i></div><p>Trip boundary <b>370 K</b></p></div>
+            <div class="metric"><label>Concentration A</label><strong><span id="concentration">0.250</span><small>mol/L</small></strong></div>
+            <div class="metric"><label>Coolant / control</label><strong><span id="coolant">100</span><small>%</small></strong></div>
+            <div class="metric"><label>Feed rate</label><strong><span id="feed">100</span><small>%</small></strong></div>
+          </div>
+        </div>
+
+        <div class="charts">
+          <figure><figcaption><span>REACTOR TEMPERATURE</span><b>Trip 370 K</b></figcaption><canvas id="temp-chart" role="img" aria-label="Reactor temperature history, with a trip boundary at 370 kelvin"></canvas></figure>
+          <figure><figcaption><span>CONCENTRATION A</span><b>mol/L</b></figcaption><canvas id="ca-chart" role="img" aria-label="Reactant concentration history in moles per litre"></canvas></figure>
+          <figure><figcaption><span>COOLANT INPUT</span><b>% design</b></figcaption><canvas id="cool-chart" role="img" aria-label="Coolant input history as percent of design flow"></canvas></figure>
+        </div>
+      </article>
+
+      <aside class="panel status-panel">
+        <p class="eyebrow">CURRENT STATUS</p>
+        <div class="status-orb normal" id="status-orb" aria-hidden="true"><span></span></div>
+        <h2 id="status-title">Ready</h2>
+        <p id="status-copy">Start a session to become the process operator.</p>
+        <div class="status-list">
+          <div><span>Operating mode</span><strong id="mode">NORMAL</strong></div>
+          <div><span>Fault status</span><strong id="fault-status">NONE</strong></div>
+          <div><span>ADMIT gateway</span><strong id="gateway-status">ARMED</strong></div>
+        </div>
+        <div class="safety-note"><span>◈</span><p><b>One protected route to the plant.</b><br>Browser input cannot directly change process controls.</p></div>
+      </aside>
+    </section>
+
+    <section class="panel interaction-panel" id="interaction" aria-live="polite"></section>
+
+    <footer><span>IFAC World Congress demonstrator</span><span>Deterministic benchmark model · not a plant digital twin</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

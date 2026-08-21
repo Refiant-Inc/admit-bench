@@ -71,6 +71,22 @@ Everything also works fully offline with zero spend
 If anything misbehaves: `admitbench doctor`, then
 `admitbench explain <CODE>` for any violation code you see.
 
+### IFAC live demonstrator
+
+The conference CSTR interface runs fully offline and uses the same simulator,
+cartridge, action record, evidence ledger, and T0-T6 gates as the benchmark:
+
+```bash
+pip install -e ".[demo]"
+admitbench ifac-demo
+```
+
+Then open `http://127.0.0.1:8000`. See
+[docs/IFAC_DEMO.md](docs/IFAC_DEMO.md) for conference operation, optional
+consent-gated research logging, exports, and privacy boundaries. The concise
+[conference runbook](docs/IFAC_CONFERENCE_RUNBOOK.md) covers rehearsal,
+show-floor operation, recovery, and shutdown.
+
 ## The shape of the thing
 
 Three questions nest inside each other, and each is a property of a different

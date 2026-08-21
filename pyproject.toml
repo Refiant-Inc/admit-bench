@@ -16,6 +16,13 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "httpx>=0.27",
+]
+demo = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
 ]
 # Marker extra for wheel installs that include the MCP entry point and Agent
 # Plugins manifests under admitbench/agent_plugin/ (see plugin/INSTALL.md).
@@ -40,6 +47,10 @@ admitbench = [
     "agent_plugin/plugin.json",
     "agent_plugin/mcp.json",
     "agent_plugin/skills/*/SKILL.md",
+    "ifac_demo/scenarios/*.yaml",
+    "ifac_demo/static/*.html",
+    "ifac_demo/static/*.css",
+    "ifac_demo/static/*.js",
 ]
 
 [tool.pytest.ini_options]
